@@ -43,12 +43,12 @@ function CustomAlert(props) {
 }
 
 const get_and_set_systemid = async () => {
-  let system_id = localStorage.getItem("stagbin_system_id");
+  let system_id = localStorage.getItem("pastetreee_system_id");
   const valid_system_id = uuidValidate(system_id);
   // console.log("Validated systemid: ", uuidValidate(system_id));
   if (!system_id || !valid_system_id) {
     system_id = uuidv4();
-    localStorage.setItem("stagbin_system_id", system_id);
+    localStorage.setItem("pastetreee_system_id", system_id);
   }
   return system_id;
 };
@@ -89,7 +89,7 @@ const patch_save = async (
     setSuccess(true);
     console.log("res is", res);
     // console.log(base_url);
-    // window.location.href = base_url + "/" + res.data.id;
+    window.location.href = base_url + "/" + res.data.id;
   } else {
     console.log(res.status);
     console.log(res.data);
@@ -130,7 +130,7 @@ const post_save = async (
     setSuccess(true);
     // console.log(base_url);
     // console.log("res2 is", res);
-    // window.location.href = base_url + "/" + res.data.id;
+    window.location.href = base_url + "/" + res.data.id;
   } else {
     console.log(res.status);
     console.log(res.data);
@@ -177,12 +177,12 @@ const findPath = (ob, key, value) => {
 let ii = 50;
 
 function App() {
-  let localTheme = localStorage.getItem("stagbin_theme");
+  let localTheme = localStorage.getItem("pastetreee_theme");
   const base_url = window.location.origin;
-  if (base_url === "http://stagbin.tk" || base_url === "https://stagbin.tk") {
-    const TRACKING_ID = "UA-195260575-1"; // YOUR_OWN_TRACKING_ID
-    ReactGA.initialize(TRACKING_ID);
-    ReactGA.pageview(window.location.pathname + window.location.search);
+  if (base_url === "http://pastetreee.tk" || base_url === "https://pastetreee.tk") {
+    const TRACKING_ID = "XYZ"; // YOUR_OWN_TRACKING_ID
+    // ReactGA.initialize(TRACKING_ID);
+    // ReactGA.pageview(window.location.pathname + window.location.search);
   }
   const [theme, setTheme] = useState(localTheme ? localTheme : "dark");
   const [readOnly, setReadOnly] = useState(false);
@@ -230,7 +230,7 @@ function App() {
   });
   const themeToggler = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
-    localStorage.setItem("stagbin_theme", theme === "light" ? "dark" : "light");
+    localStorage.setItem("pastetreee_theme", theme === "light" ? "dark" : "light");
   };
 
   const handleKeyDown = async (event) => {
@@ -390,7 +390,7 @@ function App() {
     // setLoading(true);
 
     const headers = {
-      buid: localStorage.getItem("stagbin_system_id"),
+      buid: localStorage.getItem("pastetreee_system_id"),
     };
     const res = await axios
       .get(API_URL + "/content/" + id, {  })

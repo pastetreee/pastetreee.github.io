@@ -100,7 +100,7 @@ export default function BackToTop(props) {
         }}
       >
         <Toolbar className={classes.centerItems}>
-          <Typography variant="h6">StagBIN</Typography>
+          <Typography variant="h6">Pastetreee</Typography>
           <FormControl
             style={{
               marginLeft: "30px",

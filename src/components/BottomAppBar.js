@@ -30,11 +30,11 @@ export default function BottomAppBar(props) {
         className={classes.appBar}
       >
         <Toolbar className={classes.toolbar}>
-          <a href="https://stagbin.tk" style={{ color: "inherit" }}>
+          <a href="https://pastetreee.tk" style={{ color: "inherit" }}>
             <small>&copy; Copyright 2021, Pastetree</small>
           </a>
           <div style={{ margin: "8px" }}>
-            <a href="https://github.com/StagBin" style={{ color: "inherit" }}>
+            <a href="https://github.com/rushic24/cherrytree-clone" style={{ color: "inherit" }}>
               <h4 style={{ margin: 0 }}>Source</h4>
             </a>
           </div>

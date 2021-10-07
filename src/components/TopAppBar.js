@@ -129,7 +129,7 @@ export default function BackToTop(props) {
         }}
       >
         <Toolbar className={classes.centerItems}>
-          <Typography variant="h6">Pastetree</Typography>
+          <Typography variant="h6">Pastetreee</Typography>
           <FormControl>
             <InputLabel style={{ color: "inherit" }} htmlFor="custom-url">
               URL

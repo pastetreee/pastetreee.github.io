@@ -16,7 +16,7 @@ let reqData = {};
 const getData = async (setData, id, base_url, setIsSameContentbuid) => {
   // setLoading(true);
   const headers = {
-    buid: localStorage.getItem("stagbin_system_id"),
+    buid: localStorage.getItem("pastetreee_system_id"),
   };
   const res = await axios
     .get(API_URL + "/content/" + id, { headers })
